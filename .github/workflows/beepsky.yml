@@ -32,6 +32,7 @@ jobs:
       - name: Install Dependencies
         run: |
           tools/ci/install_spaceman_dmm.sh dreamchecker
+          tools/ci/build_tgui.sh
           touch +secret/__secret.dme
 
       - name: Misc Checks

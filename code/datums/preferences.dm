@@ -73,6 +73,9 @@ datum/preferences
 	var/target_cursor = "Default"
 	var/hud_style = "New"
 
+	var/tgui_fancy = TRUE
+	var/tgui_lock = TRUE
+
 	var/tooltip_option = TOOLTIP_ALWAYS
 
 	var/regex/character_name_validation = null //This regex needs to match the name in order to consider it a valid name
@@ -776,6 +779,19 @@ $(function() {
 			<a href="[pref_link]tooltip=1" class="toggle">[crap_checkbox(src.tooltip_option == TOOLTIP_ALWAYS)] Show Always</a>
 			<br><a href="[pref_link]tooltip=2" class="toggle">[crap_checkbox(src.tooltip_option == TOOLTIP_ALT)] Show When ALT is held</a>
 			<br><a href="[pref_link]tooltip=3" class="toggle">[crap_checkbox(src.tooltip_option == TOOLTIP_NEVER)] Never Show</a>
+		</td>
+	</tr>"}
+		LAGCHECK(80)
+		if (rebuild_data["tgui"])
+			rebuild_data["tgui"] = 0
+			data_cache["tgui"] = {"
+	<tr>
+		<th>
+			tgui<span class="info-thing" title="tgui is the UI framework we use for some game windows, and it comes with options!">?</span>
+		</th>
+		<td colspan="2">
+			<a href="[pref_link]tgui_fancy=1" class="toggle">[crap_checkbox(src.tgui_fancy)] ~fancy~ tgui</a>
+			<br><a href="[pref_link]tgui_lock=1" class="toggle">[crap_checkbox(src.tgui_lock)] tgui monitors</a>
 		</td>
 	</tr>"}
 		LAGCHECK(80)
@@ -1663,6 +1679,14 @@ $(function() {
 					src.tooltip_option = TOOLTIP_NEVER
 				else src.tooltip_option = TOOLTIP_ALWAYS
 
+		if (link_tags["tgui_fancy"])
+			rebuild_data["tgui"] = 1
+			src.tgui_fancy = !(src.tgui_fancy)
+
+		if (link_tags["tgui_lock"])
+			rebuild_data["tgui"] = 1
+			src.tgui_lock = !(src.tgui_lock)
+
 		if (link_tags["scores"])
 			rebuild_data["popups"] = 1
 			src.view_score = !(src.view_score)
@@ -1893,6 +1917,8 @@ $(function() {
 			be_spy = 0
 			be_gangleader = 0
 			tooltip_option = TOOLTIP_ALWAYS
+			tgui_fancy = TRUE
+			tgui_lock = TRUE
 			if (!force_random_names)
 				be_random_name = 0
 			else
