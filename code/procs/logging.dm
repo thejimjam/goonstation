@@ -54,6 +54,7 @@ var/global/roundLog = file("data/logs/full/[time2text(world.realtime, "YYYY-MM-D
 		if ("pathology") logs["pathology"] += ingameLog
 		if ("deleted") logs["deleted"] += ingameLog
 		if ("vehicle") logs["vehicle"] += ingameLog
+		if ("tgui") logs["tgui"] += ingameLog
 		if ("diary")
 			switch (diaryType)
 				//These are things we log in the out of game logs (the diary)

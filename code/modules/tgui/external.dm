@@ -62,7 +62,7 @@
  * optional ui_key ui key of ui to be updated
  */
 /datum/proc/update_static_data(mob/user, datum/tgui/ui, ui_key = "main")
-	ui = SStgui.try_update_ui(user, src, ui_key, ui)
+	ui = tgui_process.try_update_ui(user, src, ui_key, ui)
 	// If there was no ui to update, there's no static data to update either.
 	if(!ui)
 		return

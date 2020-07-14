@@ -112,7 +112,7 @@
 
 	// Generate page html
 	var/html
-	html = SStgui.basehtml
+	html = tgui_process.basehtml
 	// Allow the src object to override the html if needed
 	html = src_object.ui_base_html(html)
 	// Replace template tokens with important UI data
@@ -136,7 +136,7 @@
 		initial_static_data = src_object.ui_static_data(user)
 	_initial_update = url_encode(get_json(initial_data, initial_static_data))
 
-	SStgui.on_open(src)
+	tgui_process.on_open(src)
 
 /**
  * public
@@ -164,7 +164,7 @@
 /datum/tgui/proc/close()
 	user << browse(null, "window=[window_id]") // Close the window.
 	src_object.ui_close(user)
-	SStgui.on_close(src)
+	tgui_process.on_close(src)
 	for(var/datum/tgui/child in children) // Loop through and close all children.
 		child.close()
 	children.Cut()
@@ -252,7 +252,7 @@
 			if(!src_object.tgui_shared_states)
 				src_object.tgui_shared_states = list()
 			src_object.tgui_shared_states[key] = value
-			SStgui.update_uis(src_object)
+			tgui_process.update_uis(src_object)
 		if("tgui:setFancy")
 			var/value = text2num(params["value"])
 			user.client.preferences.tgui_fancy = value
@@ -269,7 +269,7 @@
 			// Call ui_act() on the src_object.
 			if(src_object.ui_act(action, params, src, state))
 				// Update if the object requested it.
-				SStgui.update_uis(src_object)
+				tgui_process.update_uis(src_object)
 
 /**
  * private
@@ -360,4 +360,4 @@
 				push_data(null, force = TRUE)
 
 /datum/tgui/proc/log_message(message)
-	log_tgui("[user] ([user.ckey]) using \"[title]\":\n[message]")
+	logTheThing("tgui", user, src, "using \"[title]\":\n[message]")
