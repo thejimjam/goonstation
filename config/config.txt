@@ -68,9 +68,9 @@ PLAY_ANTAG WRAITH 10
 PLAY_ANTAG WRESTLER 10
 
 # The minimum amount of "ready" players required for a specific round type
-BLOB_MIN_PLAYERS 15
-REV_MIN_PLAYERS 15
-SPY_THEFT_MIN_PLAYERS 10
+BLOB_MIN_PLAYERS 5
+REV_MIN_PLAYERS 5
+SPY_THEFT_MIN_PLAYERS 3
 
 # allow AI job
 ALLOW_AI
@@ -79,12 +79,12 @@ ALLOW_AI
 # AUTHENTICATION
 
 # Disable respawning
-NORESPAWN
+# NORESPAWN
 
 # Server Name
-SERVERNAME Goonstation
+SERVERNAME Breadstation
 #SERVERSUFFIX
-SERVERREGION Development
+SERVERREGION Testbed
 
 CDN http://cdn.goonhub.com
 ENV dev
