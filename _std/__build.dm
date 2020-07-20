@@ -1,4 +1,4 @@
-#define DEBUG
+// #define DEBUG
 /*
   ANY CHANGES HERE WILL BE OVERWRITTEN BY THE SERVER BUILD PROCESS.
   THAT BEING SAID, THIS IS THE IDEAL PLACE TO FORCE A CERTAIN MAP/FLAGS FOR LOCAL DEVELOPMENT.
@@ -87,28 +87,28 @@ o+`        `-` ``..-:yooos-..----------..`
 //////////// MAP OVERRIDES
 
 //#define MAP_OVERRIDE_CONSTRUCTION		// Construction mode
-//#define MAP_OVERRIDE_DESTINY			// Destiny/RP
-//#define MAP_OVERRIDE_CLARION			// Destiny/Alt RP
+//#define MAP_OVERRIDE_DESTINY		// Destiny/RP
+//#define MAP_OVERRIDE_CLARION		// Destiny/Alt RP
 //#define MAP_OVERRIDE_COGMAP			// Cogmap
-//#define MAP_OVERRIDE_COGMAP2			// Cogmap 2
+//#define MAP_OVERRIDE_COGMAP2		// Cogmap 2
 //#define MAP_OVERRIDE_DONUT2			// Updated Donut2
 //#define MAP_OVERRIDE_DONUT3			// Donut3 by Ryumi
-//#define MAP_OVERRIDE_LINEMAP			// Linemap by pgoat
-//#define MAP_OVERRIDE_MUSHROOM			// Updated Mushroom
-//#define MAP_OVERRIDE_TRUNKMAP			// Updated Ovary
+//#define MAP_OVERRIDE_LINEMAP		// Linemap by pgoat
+//#define MAP_OVERRIDE_MUSHROOM		// Updated Mushroom
+//#define MAP_OVERRIDE_TRUNKMAP		// Updated Ovary
 //#define MAP_OVERRIDE_CHIRON			// Chiron by Kusibu
 //#define MAP_OVERRIDE_SAMEDI			// Samedi by Kusibu
 //#define MAP_OVERRIDE_OSHAN			// Oshan
-//#define MAP_OVERRIDE_HORIZON			// Horizon by Warcrimes
-//#define MAP_OVERRIDE_ATLAS			// gannetmap OR IS IT KUBIUSGANNETMAP??
+//#define MAP_OVERRIDE_HORIZON		// Horizon by Warcrimes
+#define MAP_OVERRIDE_ATLAS				// gannetmap OR IS IT KUBIUSGANNETMAP??
 //#define MAP_OVERRIDE_MANTA			// manta map
 //#define MAP_OVERRIDE_DENSITY
 //#define MAP_OVERRIDE_KONDARU
 //#define MAP_OVERRIDE_FLEET
 //#define MAP_OVERRIDE_ICARUS
-//#define MAP_OVERRIDE_GEHENNA			// Warcrimes WIP do not use
+//#define MAP_OVERRIDE_GEHENNA		// Warcrimes WIP do not use
 //#define MAP_OVERRIDE_PAMGOC			// Pamgoc
-//#define MAP_OVERRIDE_WRESTLEMAP		// Wrestlemap by Overtone
+//#define MAP_OVERRIDE_WRESTLEMAP	// Wrestlemap by Overtone
 
 
 //////////// HOLIDAYS AND OTHER SUCH TOGGLES
