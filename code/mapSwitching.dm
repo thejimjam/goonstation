@@ -174,6 +174,7 @@ var/global/datum/mapSwitchHandler/mapSwitcher
 			"map" = mapID,
 			"votedFor" = trigger == "Player Vote"
 		)
+		/* Let's see if this works at all!
 		var/data[] = apiHandler.queryAPI("map-switcher/switch", params, 1)
 
 		if (!data)
@@ -187,7 +188,7 @@ var/global/datum/mapSwitchHandler/mapSwitcher
 
 		if (data["response"] != "201")
 			throw EXCEPTION("Incorrect response code from jenkins: [data["response"]]")
-
+		*/
 		//we can assume jenkins is compiling the new map
 		//when it's done, jenkins will tell us so via world/Topic()
 
