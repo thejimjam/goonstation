@@ -211,7 +211,7 @@ var/global/datum/mapSwitchHandler/mapSwitcher
 		else
 			src.next = null
 
-		src.lock(mapID)
+		//src.lock(mapID)
 
 
 	//we're stuck waiting for a map compile so we can reboot. try again
